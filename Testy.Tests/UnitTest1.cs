@@ -18,7 +18,21 @@ public class UnitTest1
 
     }
 
+[Fact]
+    public void SubstractTwoNumbers()
+    {
+        //arrange
+        Operations calculator = new Operations();
+        int firstNumber = 2;
+        int secondNumber = 1;
 
+        //act
+        int result = calculator.substract(firstNumber,secondNumber);
+
+        //assert
+        Assert.Equal(1,result);
+
+    }
     [Theory]
     [InlineData(false, 1,2)]
     [InlineData(false, 1,1)]

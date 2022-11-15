@@ -3,6 +3,10 @@ public class Operations{
         return firstArgument + secondArgument;
     }
 
+    public int substract(int firstArgument, int secondArgument){
+        return firstArgument - secondArgument;
+    }
+
     public int divide(int firstArgument, int secondArgument){
         return firstArgument/secondArgument;
     }
