@@ -1,3 +1,4 @@
+using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
 
 namespace lab42.Controllers;
@@ -9,6 +10,6 @@ public class WeatherForecastController : ControllerBase
     [HttpGet]
     public IActionResult Get()
     {
-        return Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion;
+        return Ok(Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion);
     }
 }
